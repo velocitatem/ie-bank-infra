@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'scripts/**' # Trigger only with changes under folder 'scripts'
+      - '.github/workflows/ie-bank-empty-retakers-rg.yml' # Trigger only with changes under folder '.github/workflows/ie-bank-empty-retakers-rg.yml' or
   schedule:
     - cron: '59 21 * * *' # Trigger at 23:59 CEST (UTC + 2) every day
   workflow_dispatch: # Trigger manually
@@ -20,14 +21,14 @@ jobs:
     - uses: actions/checkout@main
     
     # Log into Azure
-    - uses: azure/login@v1
+    - uses: azure/login@v2
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
         enable-AzPSSession: true
 
     # Empty resource group students retakers
     - name: empty-resource-group-retakers
-      uses: azure/powershell@v1
+      uses: azure/powershell@v2
       with:
           inlineScript: ./scripts/empty-resource-group -ResourceGroupName "${{ env.RESOURCE_GROUP_RETAKERS }}" -SubscriptionId "${{ env.SUBSCRIPTION_ID_DEV }} "
           azPSVersion: "latest"
