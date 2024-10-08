@@ -1,18 +1,18 @@
-name: ie-bank-empty-students-a-rg
+name: ie-bank-empty-students-b-rg
 
 on:
   push:
     paths:
       - 'scripts/**' # Trigger only with changes under folder 'scripts'
-      - '.github/workflows/ie-bank-empty-students-a-rg.yml' # Trigger only with changes under folder '.github/workflows/ie-bank-empty-students-a-rg.yml' or
+      - '.github/workflows/ie-bank-empty-students-b-rg.yml' # Trigger only with changes under folder '.github/workflows/ie-bank-empty-students-a-rg.yml' or
   schedule:
     - cron: '59 21 * * *' # Trigger at 23:59 CEST (UTC + 2) every day
   workflow_dispatch: # Trigger manually
 
 env:
-  RESOURCE_GROUP_DEV: BCSAI2024-DEVOPS-STUDENTS-A-DEV
-  RESOURCE_GROUP_UAT: BCSAI2024-DEVOPS-STUDENTS-A-UAT
-  RESOURCE_GROUP_PROD: BCSAI2024-DEVOPS-STUDENTS-A-PROD
+  RESOURCE_GROUP_DEV: BCSAI2024-DEVOPS-STUDENTS-B-DEV
+  RESOURCE_GROUP_UAT: BCSAI2024-DEVOPS-STUDENTS-B-UAT
+  RESOURCE_GROUP_PROD: BCSAI2024-DEVOPS-STUDENTS-B-PROD
 
 jobs:
   remove-resource-groups:
