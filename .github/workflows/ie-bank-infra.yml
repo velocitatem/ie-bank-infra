@@ -7,9 +7,9 @@ on:
         - '!scripts/**'
 
 env:
-  RESOURCE_GROUP_DEV: BCSAI2024-DEVOPS-PROFESSORS
+  RESOURCE_GROUP_DEV: drosel_resources
   SUBSCRIPTION_ID_DEV: e0b9cada-61bc-4b5a-bd7a-52c606726b3b
-  USER_ALIAS: jseijas
+  USER_ALIAS: drosel
 
 jobs:
   build:
@@ -19,7 +19,7 @@ jobs:
       # Checkout code
     - uses: actions/checkout@main
 
-      # Lint Bicep code 
+      # Lint Bicep code
     - name: Run Bicep linter
       run: az bicep build --file ./main.bicep
 
@@ -34,7 +34,7 @@ jobs:
 
       # Checkout code
     - uses: actions/checkout@main
-    
+
       # Log into Azure
     - uses: azure/login@v2
       with:
