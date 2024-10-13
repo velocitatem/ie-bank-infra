@@ -1,5 +1,5 @@
 
-name: ie-bank-infra
+name: ie-bank-infra-uat
 
 on:
   workflow_dispatch:
