@@ -3,9 +3,10 @@ name: ie-bank-infra
 
 on:
   workflow_dispatch:
-  pull:
+  push:
     branches:
       - uat
+
 
 env:
   RESOURCE_GROUP_UAT:  BCSAI2024-DEVOPS-STUDENTS-B-UAT
