@@ -6,19 +6,19 @@
             "value": "nonprod"
         },
         "postgreSQLServerName": {
-            "value": "drosel-dbsrv-uat"
+            "value": "drosel-dbsrv-uat-temp"
         },
         "postgreSQLDatabaseName": {
-            "value": "drosel-db-uat"
+            "value": "drosel-db-uat-temp"
         },
         "appServicePlanName": {
-            "value": "drosel-asp-uat"
+            "value": "drosel-asp-uat-temp"
         },
         "appServiceAPIAppName": {
-            "value": "drosel-be-uat"
+            "value": "drosel-be-uat-temp"
         },
         "appServiceAppName": {
-            "value": "drosel-fe-uat"
+            "value": "drosel-fe-uat-temp"
         },
         "location": {
             "value": "North Europe"
